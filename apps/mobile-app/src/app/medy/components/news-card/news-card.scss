@@ -1,0 +1,38 @@
+ion-card {
+    border-radius: 13px;
+}
+
+ion-card-title {
+    font-size: 21px;
+    font-weight: bold;
+    color: #2c363f;
+    margin-bottom: 8px;
+}
+
+ion-card-header {
+    border-bottom: solid 1px #f1f1f1;
+}
+
+span {
+    font-size: 12px;;
+    color: #a8a8a8;
+    margin-top: 8px;
+    margin-left: 20px;
+
+    &:nth-of-type(1) {
+        font-weight: bold;
+        margin-left: 0;
+    }
+}
+
+ion-card-content {
+    font-size: 16px;
+    font-weight: 400;
+    color: #2c363f;
+    margin: 10px 0;
+}
+
+.read-more {
+    margin-bottom: 20px;
+    margin-right: 10px;
+}
