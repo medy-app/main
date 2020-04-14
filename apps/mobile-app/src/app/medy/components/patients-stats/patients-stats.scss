@@ -1,0 +1,58 @@
+:host {
+    width: 100%;
+}
+
+.panel {
+    &:nth-child(1) {
+        border-right: solid 1px #dddedd;
+    }
+
+    &__infected {
+        background-color: #eb434333;
+    
+    }
+
+    &__recovered {
+        background-color: #25d39f33;
+    }
+}
+
+.dot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .dot {
+        display: inline-block;
+        border-radius: 0;
+        width: 4px;
+        height: 16px;
+
+        &__infected {
+            background-color: #eb4343;
+        }
+
+        &__recovered {
+            background-color: #25d39f;
+        }
+    }
+}
+
+.label {
+    font-size: 12px;
+    font-weight: 400;
+    color: #7b7b7b;
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    &--small{   
+        vertical-align: bottom;
+        display: contents;     
+        text-transform: none;
+    }
+
+    &--medium{
+        font-size: 14px;
+    }
+
+}

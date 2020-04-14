@@ -1,0 +1,51 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size="6" class="panel panel__infected">
+            <ion-row>
+                <ion-col size="2" class="dot-container">
+                    <span class="dot dot__infected"></span>
+                </ion-col>
+                <ion-col size="10">
+                    <ion-row><span>{{ infected }}&nbsp;</span><span class="label label--small">w Polsce</span></ion-row>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="10" offset="2">
+                    <ion-row><span class="label label--medium">23121</span></ion-row>
+                </ion-col>
+            </ion-row>
+        </ion-col>
+        <ion-col size="6" class="panel panel__recovered">
+            <ion-row>
+                <ion-col size="2" class="dot-container">
+                    <span class="dot dot__recovered"></span>
+                </ion-col>
+                <ion-col size="10">
+                    <ion-row><span>{{ recovered }}&nbsp;</span><span class="label label--small">w Polsce</span></ion-row>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="10" offset="2">
+                    <ion-row><span class="label label--medium">23121</span></ion-row>
+                </ion-col>
+            </ion-row>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="8" offset="4" size-sm="6" offset-sm="6">
+            <ion-row>
+                <ion-col size="5" class="dot-container">
+                    <span class="dot dot__infected"></span>
+                    <span class="label label--small">&nbsp;zainfekowani</span>
+                </ion-col>
+                <ion-col size="4" class="dot-container">
+                    <span class="dot dot__recovered"></span>
+                    <span class="label label--small">&nbsp;wyleczeni</span>
+                </ion-col>
+                <ion-col size="3" class="dot-container">
+                    <span class="label label--small" style="color: black">więcej+</span>
+                </ion-col>
+            </ion-row>
+        </ion-col>
+    </ion-row>
+</ion-grid>

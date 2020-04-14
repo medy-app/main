@@ -1,0 +1,7 @@
+{
+  "name": "medy-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
