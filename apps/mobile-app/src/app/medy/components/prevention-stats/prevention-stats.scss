@@ -1,64 +1,63 @@
 .stats-card {
-    z-index: 3;
-    background-image: radial-gradient(circle at 23% 17%, #12c08c, #25d39f 77%);
-    
-    ion-card-title {
-        color: rgba(255,255,255,1) !important;
-        font-size: 28px;
+  background-image: radial-gradient(circle at 23% 17%, #12c08c, #25d39f 77%);
+  z-index: 3;
 
-        & div:nth-child(2) {
-            font-weight: 400;
-        }
-    }
+  ion-card-title {
+    color: rgba(255, 255, 255, 1) !important;
+    font-size: 28px;
 
-    ion-card-subtitle {
-        color: rgba(255,255,255,.7) !important;
-        font-size: 16px;
-        font-weight: 400;
-        white-space: nowrap;
-        text-transform: none;
+    & div:nth-child(2) {
+      font-weight: 400;
     }
+  }
 
-    .points-wrapper__shift {
-        margin-top: 20px;
-    }
+  ion-card-subtitle {
+    color: rgba(255, 255, 255, .7) !important;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: none;
+    white-space: nowrap;
+  }
 
-    .caption {
-        font-size: 12px;
-        font-weight: 400;
-        text-align: center;
-        margin-bottom: 15px;
-        padding: 0;
-    }
+  .points-wrapper__shift {
+    margin-top: 20px;
+  }
+
+  .caption {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    padding: 0;
+    text-align: center;
+  }
 }
 
 ion-card {
-    box-shadow: none;
-    border-radius: 13px;
+  border-radius: 13px;
+  box-shadow: none;
 }
 
 .background-wrapper {
+  bottom: 50px;
+  margin: 0 10px;
+  max-height: 30px;
+  position: relative;
+
+  ion-card {
+    height: 50px;
+  }
+
+  .background-card-one {
+    background-color: rgba(37, 211, 159, .55);
+    margin: 0 20px;
+    z-index: 1;
+  }
+
+  .background-card-two {
+    background-color: rgba(37, 211, 159, .34);
+    margin: 0 40px;
     position: relative;
-    bottom: 50px;
-    margin: 0 10px;
-    max-height: 30px;
-
-    ion-card {
-        height: 50px;
-    }
-    
-
-    .background-card-one {
-        z-index: 1;
-        background-color: rgba(37, 211, 159, 0.55);
-        margin: 0 20px;
-    }
-    
-    .background-card-two {
-        z-index: 2;
-        background-color: rgba(37, 211, 159, 0.34);
-        margin: 0 40px;
-        position: relative;
-        top: -40px;
-    }
+    top: -40px;
+    z-index: 2;
+  }
 }
