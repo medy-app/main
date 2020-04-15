@@ -1,0 +1,56 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "indentation": 2,
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "else",
+          "each",
+          "@each",
+          "extends",
+          "include",
+          "mixin",
+          "if",
+          "content",
+          "function",
+          "return",
+          "define-mixin"
+        ]
+      }
+    ],
+    "string-quotes": "single",
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "font-smoothing"
+        ]
+      }
+    ],
+    "declaration-empty-line-before": "never",
+    "order/properties-alphabetical-order": true,
+    "no-descending-specificity": null,
+    "number-leading-zero": "never",
+    "order/order": [
+      "declarations",
+      "at-rules",
+      "rules"
+    ],
+    "length-zero-no-unit": true,
+    "declaration-block-no-redundant-longhand-properties": true,
+    "selector-type-no-unknown": [true, { "ignoreTypes": ["/^ion-/"]}],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": ["ng-deep"]
+      }
+    ]
+  }
+}
