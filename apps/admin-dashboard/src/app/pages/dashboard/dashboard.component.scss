@@ -1,0 +1,21 @@
+.example-card {
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  &:nth-child(2n+2) {
+    .example-header-image {
+      background-image: url('https://material.angular.io/assets/img/examples/shiba2.jpg');
+      background-size: cover;
+    }
+  }
+}
+
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.example-card {
+  max-width: 250px;
+}

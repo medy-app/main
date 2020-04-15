@@ -1,0 +1,103 @@
+<div class="columns m-t-0 m-b-0 m-l-0 m-r-0 is-white">
+  <!-- Column Left -->
+  <div class="column is-7 p-t-0 p-b-0 p-l-0 p-r-0">
+    <section class="hero is-fullheight is-gray">
+      <div class="d-flex m-t-55 m-l-100">
+        <mat-card class="example-card m-t-21 m-r-21 m-b-21 m-l-21" *ngFor="let card of obs | async">
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-header>
+            <mat-card-title class="m-t-13">{{ card.title }}</mat-card-title>
+            <mat-card-subtitle class="m-t-5 m-b-0">{{ card.date}}</mat-card-subtitle>
+            <mat-card-subtitle class="m-t-5 m-b-13">{{ card.link}}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>
+              {{ card.content }}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button class="button button-save button-fullwidth is-centered">
+              <span class="button-save-text m-b-2">Dodaj do aplikacji</span>
+            </button>
+          </mat-card-actions>
+
+        </mat-card>
+      </div>
+      <mat-paginator class="is-gray" [pageSizeOptions]="[6]"></mat-paginator>
+    </section>
+  </div>
+
+  <!-- Column Right -->
+  <div class="column is-5 p-t-0 p-b-0 ">
+    <section class="hero is-fullheight is-white m-l-55 m-r-55">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h1 class="is-size-2 m-t-100 m-b-34 has-text-centered">Doodawanie wiadomości do aplikacji</h1>
+        <div class="card-content">
+          <div class="field">
+            <p class="label-form has-text-left m-b-5">Tytuł wiadomości</p>
+            <div class="control">
+              <input class="input form-input" type="text" placeholder="Tytuł wiadomości" name="title"
+              [ngClass]="{'is-danger': formStatus.title.errors && submitted}" formControlName="title"
+              autocomplete="title">
+              <ng-container *ngIf="formStatus.title.errors && submitted">
+                <p class="help is-danger has-text-centered m-t-8" *ngIf="formStatus.title.errors.maxlength">Tytuł wiadomości może zawierać maksymalnie 64 znaki.</p>
+                <p class="help is-danger has-text-centered m-t-8" *ngIf="formStatus.title.errors.required">Tytuł wiadomości jest wymagany.</p>
+              </ng-container>
+            </div>
+          </div>
+          <div class="field m-t-21">
+            <p class="label-form has-text-left m-b-5">Źródło wiadomości</p>
+            <div class="control">
+              <input class="input form-input" type="text"
+                placeholder="www.zrodlowiadomosci.pl"
+                name="link"
+                [ngClass]="{'is-danger': formStatus.link.errors && submitted}" formControlName="link"
+                autocomplete="link">
+                <ng-container *ngIf="formStatus.link.errors && submitted">
+                  <p class="help is-danger has-text-centered m-t-8" *ngIf="formStatus.link.errors.maxlength">Link do źródła wiadomości może zawierać co najwyżej 64 znaków.</p>
+                  <p class="help is-danger has-text-centered m-t-8" *ngIf="formStatus.link.errors.required">Link do źródła wiadomości jest wymagany.</p>
+                </ng-container>
+            </div>
+          </div>
+          <div class="field m-t-21">
+            <p class="label-form has-text-left m-b-5">Data utworzenia</p>
+            <div class="control">
+              <input class="input form-input" type="text"
+                placeholder="01/04/2020;"
+                name="date"
+                [ngClass]="{'is-danger': formStatus.date.errors && submitted}" formControlName="date"
+                autocomplete="date">
+                <ng-container *ngIf="formStatus.date.errors && submitted">
+                  <p class="help is-danger has-text-centered m-t-8" *ngIf="formStatus.date.errors.required">Data utworzenia jest wymagane.</p>
+                </ng-container>
+            </div>
+          </div>
+          <div class="field m-t-21">
+            <p class="label-form has-text-left m-b-5">Treść wiadomości</p>
+            <div class="control">
+
+                <textarea class="textarea has-fixed-size" type="text" placeholder="Tutaj wprowadź treść wiadomości." name="content"
+                [ngClass]="{'is-danger': formStatus.content.errors && submitted}" formControlName="content"
+                autocomplete="content"></textarea>
+
+                <ng-container *ngIf="formStatus.content.errors && submitted">
+                  <p class="help is-danger has-text-centered m-t-8" *ngIf="formStatus.content.errors.required">Treść wiadomości jest wymagane.</p>
+                </ng-container>
+            </div>
+          </div>
+          <div>
+            <button class="button button-medy-gray button-medy-form m-t-13" type="submit">
+              <span class="button-save-text is-size-4" type="submit">Zapisz jako poradę</span>
+            </button>
+            <button class="button button-medy-gray button-medy-form m-t-13" type="submit">
+              <span class="button-save-text is-size-4" type="submit">Zapisz jako szkic</span>
+            </button>
+            <button class="button button-medy button-medy-form m-t-13" type="submit">
+              <span class="button-save-text is-size-4" type="submit">Opublikuj</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>

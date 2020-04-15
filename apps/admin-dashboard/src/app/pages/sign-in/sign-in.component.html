@@ -1,0 +1,88 @@
+<section class="hero is-gray is-fullheight">
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body card-form">
+    <section class="container has-text-centered">
+      <div class="column is-12">
+        <figure class="m-t-144">
+          <img src="../../../assets/logo_medy.svg" alt="Logo Medy">
+        </figure>
+        <h2 class="is-size-2 m-t-34 m-b-34">Zaloguj się</h2>
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+          <div class="columns">
+            <div class="column is-6 is-offset-3">
+              <div class="card large card-form">
+                <div class="card-content">
+                  <div class="field">
+                    <p class="label-form has-text-left m-b-5">E-mail</p>
+                    <div class="control">
+                      <input class="input form-input" type="text" placeholder="jan.kowalski@gmail.com"  name="email"
+                      [ngClass]="{'is-danger': formStatus.email.errors && submitted}" formControlName="email"
+                      autocomplete="email">
+                      <ng-container *ngIf="formStatus.email.errors && submitted">
+                        <p class="help is-danger has-text-centered" *ngIf="formStatus.email.errors.email">E-mail ma nieprawidłowy format.</p>
+                        <p class="help is-danger has-text-centered" *ngIf="formStatus.email.errors.maxlength">E-mail może zawierać maksymalnie 64 znaki.</p>
+                        <p class="help is-danger has-text-centered" *ngIf="formStatus.email.errors.required">E-mail jest wymagany.</p>
+                      </ng-container>
+                    </div>
+                  </div>
+                  <div class="field m-t-21">
+                    <p class="label-form has-text-left m-b-5">Hasło</p>
+                    <div class="control">
+                      <input class="input form-input" type="password"
+                        placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+                        name="email"
+                        [ngClass]="{'is-danger': formStatus.pass.errors && submitted}" formControlName="pass"
+                        autocomplete="pass">
+                        <ng-container *ngIf="formStatus.pass.errors && submitted">
+                          <p class="help is-danger has-text-centered" *ngIf="formStatus.pass.errors.minlength">Hasło musi zawierać co najmniej 8 znaków.</p>
+                          <p class="help is-danger has-text-centered" *ngIf="formStatus.pass.errors.maxlength">Hasło musi zawierać co najwyżej 30 znaków..</p>
+                          <p class="help is-danger has-text-centered" *ngIf="formStatus.pass.errors.required">Hasło jest wymagane.</p>
+                        </ng-container>
+                    </div>
+                  </div>
+                  <div>
+                    <button class="button button-medy button-medy-form m-t-13" type="submit">
+                      <span class="button-save-text" type="submit">Zaloguj</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="m-t-34">
+                <p class="is-size-4 form-text">If you are not signed up
+                  <a routerLink="/sign-up" class="is-size-4 form-text-color">
+                    Do it here.
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot m-t-195">
+    <div class="container">
+      <div class="content has-text-left">
+        <hr>
+        <div class="card-footer">
+          <p class="check-offer is-size-5 m-t-20 m-b-20">Copyright © 2020 by: Medy Wszelkie
+            prawa zastrzeżone.</p>
+          <div class="check-offer m-t-13">
+            <a href="#">
+              <fa-icon [icon]="faFacebookF" class="m-r-13 icon"></fa-icon>
+            </a>
+            <a href="#">
+              <fa-icon [icon]="faYoutube" class="m-r-21 icon"></fa-icon>
+            </a>
+            <a href="#">
+              <fa-icon [icon]="faInstagram" class="icon"></fa-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
