@@ -1,0 +1,130 @@
+/* You can add global styles to this file, and also import other style files */
+
+@charset "utf-8";
+
+@import "./styles/base/bulma";
+@import "./styles/base/colors";
+@import "./styles/base/typography";
+@import "./styles/helpers/spacing-helpers";
+@import "../../../node_modules/bulma/css/bulma.min.css";
+@import "~bulma/bulma.sass";
+
+h1,
+h2 {
+  font-weight: 800;
+}
+
+h3 {
+  font-weight: 700;
+}
+
+.hero-body {
+  display: block !important;
+}
+
+.button-medy {
+  background-color: $primary2 !important;
+  color: #fff !important;
+  &-localization {
+    width: 144px;
+    height: 2.5rem;
+  }
+  &-form {
+    width: 100%;
+  }
+}
+
+.button-medy-gray {
+  background-color: #fff !important;
+  color: #b2b2b2 !important;
+  border-color: #b2b2b2 !important;
+}
+
+.card-content {
+  padding: 13px;
+}
+
+.card {
+  border-radius: 0.8125rem !important;
+  &-footer {
+    justify-content: space-between;
+    border: none;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.hero-foot-content {
+  line-height: 1.19;
+  letter-spacing: 1.07px;
+}
+
+.is-gray {
+  background-color: $gray-light6;
+}
+
+.is-white {
+  background-color: #fff;
+}
+
+.card-form {
+  border-radius: 4px !important;
+  padding: $size-3;
+}
+
+.form-text {
+  display: inline;
+  color: $gray-light;
+  &-color {
+    font-weight: 700;
+    display: inline;
+    color: $primary2;
+  }
+}
+
+.label-form {
+  font-weight: 700;
+}
+
+.form-input {
+  background-color: $gray-light5;
+  border-radius: 4px;
+  border-color: #eaeaed;
+}
+
+.border-bottom-navbar {
+  border-bottom: 1px solid #eaeaed
+}
+
+//dashboard
+
+.mat-paginator {
+  background:#fff
+}
+
+.is-gray {
+  background-color: $gray-light6;
+}
+
+.is-right {
+  float: right;
+}
+
+.mat-card-image {
+  margin: 0 !important;
+}
+
+.mat-card-header-text {
+  margin: 0 !important;
+}
+
+.button-fullwidth {
+  width: 100%;
+}
+
+.textarea {
+  background-color: #fbfbfd;
+  border-color: #eaeaed;
+}
