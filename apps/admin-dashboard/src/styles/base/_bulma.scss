@@ -1,0 +1,84 @@
+@import "../../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../../node_modules/bulma/sass/utilities/functions.sass";
+@import "../base/typography";
+
+$size-1: 55px;
+$size-2: 34px;
+$size-3: 21px;
+$size-4: 16px;
+$size-5: 13px;
+$size-6: 10px;
+$size-7: 8px;
+$size-8: 5px;
+
+$has-text-weight-light: 300;
+$has-text-weight-normal: 400;
+$has-text-weight-medium: 500;
+$has-text-weight-semibold: 600;
+$has-text-weight-bold: 700;
+
+$family-sans-serif: $muli;
+$text: #000;
+
+$size-normal: 16px;
+
+$hr-height: 1px;
+$hr-margin: 0;
+$hr-background-color: #f2f2f2;
+
+$link: #000;
+$link-hover: #25D39F;
+$body-background-color: #fafafa;
+$card-background-color: #fff;
+$card-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.13);
+$card-radius: 13px;
+
+$input-color: #000;
+$input-background-color: transparent;
+$input-border-color: #fbfbfb;
+$input-shadow: none;
+$input-box-shadow-size: 0 0 8px 0;
+$input-box-shadow-color: rgba(0,0,0,0.13);
+$input-hover-color: #000;
+$input-hover-border-color: #25D39F;
+$input-focus-color: #000;
+$input-focus-border-color: #25D39F;
+$input-focus-box-shadow-size: 0 0 8px 0;
+$input-focus-box-shadow-color: rgba(0,0,0,0.13);
+$input-radius: 13px;
+
+$button-color: #25D39F;
+$button-active-color: #25D39F;
+$button-radius: 3px;
+$button-border: solid 1px #25D39F;
+$button-active-border-color: #25D39F;
+$button-hover-border-color: #25D39F;
+$button-background-color: #fff;
+$navbar-item-hover-color: #25D39F;
+
+$button-focus-border-color: #25D39F;
+$button-focus-color:#25D39F;
+
+$button-focus-box-shadow-size: none;
+
+$navbar-z: 1;
+
+$navbar-item-img-max-height: 55px;
+
+// restaurant page
+$button-border-color: #25D39F;
+$help-size: $size-5;
+$radius-rounded: 50%;
+
+$card-footer-border-top : 1px solid #eaeaed;
+
+$navbar-item-hover-background-color : #fff;
+
+.has-float-right {
+	float: right;
+}
+
+.is-centered {
+	justify-content: center !important;
+	align-items: center !important;
+}
