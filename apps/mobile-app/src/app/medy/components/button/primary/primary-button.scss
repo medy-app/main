@@ -1,0 +1,67 @@
+.primary-button {
+    margin: 10px;
+
+    &__big {
+        font-size: 65px;
+    }
+}
+
+.main-fab-button {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    height: 0;
+    bottom: 84px;
+}
+
+.primary-list-wrapper {
+    width: 100vw;
+    background: white;
+    position: sticky;
+    bottom: 0;
+    margin-bottom: -27px;
+    padding: 0 16px;
+    z-index: -1;
+}
+
+.blurred-top {
+    height: 300px;
+    width: 500%;
+    margin-bottom: -200px;
+    background: white;
+    filter: blur(50px);
+    z-index: -5;
+}
+
+ion-fab-list {
+    margin: 0;
+
+    ion-fab-button {
+        width: 71px;
+        height: 71px;
+        margin-right: 15px;
+    }
+
+    ion-icon {
+        font-size: 33px;
+    }
+
+    ion-row {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+
+    .primary {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .points {
+        font-size: 18px;
+        font-weight: 600;
+        color: #eb4343;
+        margin-left: 13px;
+    }
+}
