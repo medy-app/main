@@ -1,11 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'medy-primary-button',
-  templateUrl: 'primary-button.html',
-  styleUrls: ['primary-button.scss']
+  selector: 'medy-secondary-button',
+  templateUrl: 'secondary-button.html',
+  styleUrls: ['secondary-button.scss']
 })
-export class MedyPrimaryButtonComponent {
+export class MedySecondaryButtonComponent {
   @Input()
   arrow: boolean = false;
   @Output()
@@ -13,3 +13,4 @@ export class MedyPrimaryButtonComponent {
 
   constructor() {}
 }
+

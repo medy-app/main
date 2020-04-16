@@ -1,3 +1,4 @@
-<ion-button class="medy-button" (click)="openPage()" color="secondary" expand="block" fill="outline" shape="round">
-  Preferencje powiadomień
+<ion-button class="medy-button" (click)="this.click.emit()" color="secondary" expand="block" fill="solid" shape="round">
+  <span class="text-container__left"><ng-content></ng-content></span>
+  <ion-icon *ngIf="arrow" src="assets/svg/arrow.svg" slot="end"></ion-icon>
 </ion-button>
