@@ -13,7 +13,7 @@
       "prefix": "medy",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/apps/mobile-app",
             "index": "apps/mobile-app/src/index.html",
@@ -68,7 +68,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "mobile-app:build",
             "proxyConfig": "apps/mobile-app/proxy.conf.json"
@@ -92,11 +92,14 @@
               "apps/mobile-app/tsconfig.app.json",
               "apps/mobile-app/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/mobile-app/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/mobile-app/**"
+            ]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "jestConfig": "apps/mobile-app/jest.config.js",
             "tsConfig": "apps/mobile-app/tsconfig.spec.json",
@@ -151,8 +154,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/mobile-app-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/mobile-app-e2e/**"]
+            "tsConfig": [
+              "apps/mobile-app-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/mobile-app-e2e/**"
+            ]
           }
         }
       }
@@ -170,7 +178,9 @@
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/assets"]
+            "assets": [
+              "apps/api/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -199,7 +209,10 @@
               "apps/api/tsconfig.app.json",
               "apps/api/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/api/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/api/**"
+            ]
           }
         },
         "test": {
@@ -225,7 +238,10 @@
               "libs/api-interfaces/tsconfig.lib.json",
               "libs/api-interfaces/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/api-interfaces/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/api-interfaces/**"
+            ]
           }
         },
         "test": {
@@ -234,6 +250,139 @@
             "jestConfig": "libs/api-interfaces/jest.config.js",
             "tsConfig": "libs/api-interfaces/tsconfig.spec.json",
             "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "admin-dashboard": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/admin-dashboard",
+      "sourceRoot": "apps/admin-dashboard/src",
+      "prefix": "medy-main",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/admin-dashboard",
+            "index": "apps/admin-dashboard/src/index.html",
+            "main": "apps/admin-dashboard/src/main.ts",
+            "polyfills": "apps/admin-dashboard/src/polyfills.ts",
+            "tsConfig": "apps/admin-dashboard/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/admin-dashboard/src/favicon.ico",
+              "apps/admin-dashboard/src/assets"
+            ],
+            "styles": [
+              "apps/admin-dashboard/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/admin-dashboard/src/environments/environment.ts",
+                  "with": "apps/admin-dashboard/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "admin-dashboard:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "admin-dashboard:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "admin-dashboard:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/admin-dashboard/tsconfig.app.json",
+              "apps/admin-dashboard/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/admin-dashboard/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/admin-dashboard/jest.config.js",
+            "tsConfig": "apps/admin-dashboard/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/admin-dashboard/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "admin-dashboard-e2e": {
+      "root": "apps/admin-dashboard-e2e",
+      "sourceRoot": "apps/admin-dashboard-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/admin-dashboard-e2e/cypress.json",
+            "tsConfig": "apps/admin-dashboard-e2e/tsconfig.e2e.json",
+            "devServerTarget": "admin-dashboard:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "admin-dashboard:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/admin-dashboard-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/admin-dashboard-e2e/**"
+            ]
           }
         }
       }
