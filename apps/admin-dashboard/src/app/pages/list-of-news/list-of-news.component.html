@@ -1,0 +1,83 @@
+<section class="hero is-gray is-fullheight">
+
+  <div class="hero-body">
+      <div class="column is-11 is-offset-1">
+        <h2 class="is-size-2 m-t-89 m-b-34">Manage News</h2>
+        <div class="columns m-t-55">
+          <div class="column is-11">
+            <table mat-table [dataSource]="dataSource">
+  
+              <ng-container matColumnDef="Id">
+                <th class="is-size-3 p-t-13" mat-header-cell *matHeaderCellDef> Id </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+              </ng-container>
+  
+              <ng-container matColumnDef="Title">
+                <th class="is-size-3 p-t-13" mat-header-cell *matHeaderCellDef> Title </th>
+                <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+              </ng-container>
+  
+              <ng-container matColumnDef="DataPublication">
+                <th class="is-size-3 p-t-13" mat-header-cell *matHeaderCellDef> Publication date </th>
+                <td mat-cell *matCellDef="let element"> {{element.dataPublic}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="Active">
+                <th class="is-size-3 p-t-13" mat-header-cell *matHeaderCellDef> Active </th>
+                <td mat-cell *matCellDef="let element">
+                  <ng-container *ngIf="element.active === true; else elseBlock">
+                    <fa-icon [icon]="['fas', 'check']" class="pointer fa-lg" (click)="activeNew()"></fa-icon>
+                  </ng-container>
+                  <ng-template #elseBlock>
+                    <fa-icon [icon]="['fas', 'times']" class="pointer fa-lg" (click)="activeNew()"></fa-icon>
+                  </ng-template>
+                </td>
+              </ng-container>
+  
+              <ng-container matColumnDef="Edit">
+                <th class="is-size-3 p-t-13" mat-header-cell *matHeaderCellDef> Edit </th>
+                <td mat-cell *matCellDef="let element">
+                  <fa-icon [icon]="['fas', 'edit']" class="pointer fa-lg"></fa-icon>
+                </td>
+              </ng-container>
+  
+              <ng-container matColumnDef="Delete">
+                <th class="is-size-3 p-t-13" mat-header-cell *matHeaderCellDef> Delete </th>
+                <td mat-cell *matCellDef="let element">
+                  <fa-icon [icon]="['fas', 'trash']" class="pointer fa-lg" (click)="deleteNew()"></fa-icon>
+                </td>
+              </ng-container>
+  
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+            </table>
+            <mat-paginator [pageSizeOptions]="[10, 25, 50, 100]"></mat-paginator>
+            
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="hero-foot m-t-195">
+    <div class="container">
+      <div class="content has-text-left">
+        <hr>
+        <div class="card-footer">
+          <p class="check-offer is-size-5 m-t-20 m-b-20">Copyright © 2020 by: Medy Wszelkie
+            prawa zastrzeżone.</p>
+          <div class="check-offer m-t-13">
+            <a href="#">
+              <fa-icon [icon]="faFacebookF" class="m-r-13 icon"></fa-icon>
+            </a>
+            <a href="#">
+              <fa-icon [icon]="faYoutube" class="m-r-21 icon"></fa-icon>
+            </a>
+            <a href="#">
+              <fa-icon [icon]="faInstagram" class="icon"></fa-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

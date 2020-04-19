@@ -129,3 +129,44 @@ h3 {
   background-color: #fbfbfd;
   border-color: #eaeaed;
 }
+
+//Angular material table
+
+table {
+  width: 100%;
+}
+
+tr.mat-header-row {
+  height: auto !important;
+  th {
+    font-size: 16px;
+    padding-bottom: 13px;
+    font-weight: 500;
+    color: #000000;
+  }
+}
+
+tr.mat-footer-row,
+tr.mat-row {
+  height: auto !important;
+  td {
+    font-size: 16px;
+    padding-bottom: 13px;
+    padding-top: 13px;
+  }
+}
+
+.mat-cell,
+.mat-footer-cell,
+.mat-header-cell,
+.mat-paginator-container {
+  font-family: $family-sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+//modal 
+.button:focus:not(:active){
+  box-shadow: none !important;
+}

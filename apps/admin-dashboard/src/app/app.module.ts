@@ -1,4 +1,3 @@
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -9,6 +8,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardModule } from './pages/dashboard/dashboard.module';
 
 import { SignInModule } from './pages/sign-in/sign-in.module';
+import { ListOfNewsModule } from './pages/list-of-news/list-of-news.module';
+import { ListOfAdviceModule } from './pages/list-of-advice/list-of-advice.module';
+import { ActiveComponent } from './components/modals/active/active.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SignInModule } from './pages/sign-in/sign-in.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     DashboardModule,
-    SignInModule
+    SignInModule,
+    ListOfAdviceModule,
+    ListOfNewsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

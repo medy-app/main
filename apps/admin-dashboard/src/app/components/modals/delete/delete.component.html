@@ -1,0 +1,27 @@
+<div class="m-t-25 has-text-centered">
+  <figure>
+    <img src="../../../../assets/emojione-monotone_cross-mark.png" alt="" srcset="">
+  </figure>
+  <!-- <ng-container *ngIf="!delete; else elseTemplate">
+    <h3 class="is-size-2">Czy chcesz wiadomość ?</h3>
+  </ng-container>
+  <ng-template #elseTemplate>
+    <h3 class="is-size-2">Czy chcesz poradę ?</h3>
+  </ng-template> -->
+  <h3 class="is-size-2 m-t-13">Do you really want to delete {{ data.data }} ?</h3>
+
+</div>
+<div class="m-t-34">
+  <div class="columns is-vcentered has-text-centered">
+    <div class="column is-4 is-offset-2 m-l-89">
+      <button class="button button-medy-gray button-fullwidth" [mat-dialog-close]="false">
+        <span class="button-save-text">No</span>
+      </button>
+    </div>
+    <div class="column is-4 is-offset-1">
+      <button class="button button-save button-fullwidth" [mat-dialog-close]="true">
+        <span class="button-save-text">Yes</span>
+      </button>
+    </div>
+  </div>
+</div>
