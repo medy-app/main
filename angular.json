@@ -30,7 +30,10 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["apps/mobile-app/src/global.scss", "apps/mobile-app/src/theme/medy-variables.scss"],
+            "styles": [
+              "apps/mobile-app/src/global.scss",
+              "apps/mobile-app/src/theme/medy-variables.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -85,8 +88,14 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/mobile-app/tsconfig.app.json", "apps/mobile-app/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**", "!apps/mobile-app/**"]
+            "tsConfig": [
+              "apps/mobile-app/tsconfig.app.json",
+              "apps/mobile-app/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/mobile-app/**"
+            ]
           }
         },
         "test": {
@@ -145,8 +154,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/mobile-app-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/mobile-app-e2e/**"]
+            "tsConfig": [
+              "apps/mobile-app-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/mobile-app-e2e/**"
+            ]
           }
         }
       }
@@ -164,7 +178,9 @@
             "outputPath": "dist/apps/api",
             "main": "apps/api/src/main.ts",
             "tsConfig": "apps/api/tsconfig.app.json",
-            "assets": ["apps/api/src/assets"]
+            "assets": [
+              "apps/api/src/assets"
+            ]
           },
           "configurations": {
             "production": {
@@ -189,8 +205,14 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/api/tsconfig.app.json", "apps/api/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**", "!apps/api/**"]
+            "tsConfig": [
+              "apps/api/tsconfig.app.json",
+              "apps/api/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/api/**"
+            ]
           }
         },
         "test": {
@@ -212,8 +234,14 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["libs/api-interfaces/tsconfig.lib.json", "libs/api-interfaces/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**", "!libs/api-interfaces/**"]
+            "tsConfig": [
+              "libs/api-interfaces/tsconfig.lib.json",
+              "libs/api-interfaces/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/api-interfaces/**"
+            ]
           }
         },
         "test": {
@@ -246,8 +274,13 @@
             "polyfills": "apps/admin-dashboard/src/polyfills.ts",
             "tsConfig": "apps/admin-dashboard/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/admin-dashboard/src/favicon.ico", "apps/admin-dashboard/src/assets"],
-            "styles": ["apps/admin-dashboard/src/styles.scss"],
+            "assets": [
+              "apps/admin-dashboard/src/favicon.ico",
+              "apps/admin-dashboard/src/assets"
+            ],
+            "styles": [
+              "apps/admin-dashboard/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -301,8 +334,14 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/admin-dashboard/tsconfig.app.json", "apps/admin-dashboard/tsconfig.spec.json"],
-            "exclude": ["**/node_modules/**", "!apps/admin-dashboard/**"]
+            "tsConfig": [
+              "apps/admin-dashboard/tsconfig.app.json",
+              "apps/admin-dashboard/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/admin-dashboard/**"
+            ]
           }
         },
         "test": {
@@ -337,15 +376,21 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/admin-dashboard-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/admin-dashboard-e2e/**"]
+            "tsConfig": [
+              "apps/admin-dashboard-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/admin-dashboard-e2e/**"
+            ]
           }
         }
       }
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": false
   },
   "schematics": {
     "@nrwl/angular:application": {

@@ -36,7 +36,7 @@
 
 <nav class="navbar is-fixed-top border-bottom-navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand m-t-5 m-l-21">
-    <a class="navbar-item" href="#">
+    <a class="navbar-item" [routerLink]="['/dashboard']">
       <figure class="image is-32x32">
         <img src="../../../assets/Frontend_src_assets_logo-medy.png">
       </figure>
@@ -55,16 +55,16 @@
 
     <div class="navbar-end">
       <div class="navbar-item">
-        <a class="navbar-item is-size-3 m-r-34" href="#">
+        <a class="navbar-item is-size-3 m-r-34" [routerLink]="['/dashboard']">
           Home
         </a>
-        <a class="navbar-item is-size-3 m-r-34" href="#">
+        <a class="navbar-item is-size-3 m-r-34" [routerLink]="['/list-news']">
           Manage News
         </a>
         <a class="navbar-item is-size-3 m-r-34" href="#">
           Tips
         </a>
-        <a class="navbar-item is-size-3 m-r-34" href="#">
+        <a class="navbar-item is-size-3 m-r-34" [routerLink]="['/list-advice']">
           Manage Tips
         </a>
         <div class="buttons m-r-21">
