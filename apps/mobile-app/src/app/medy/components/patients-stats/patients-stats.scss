@@ -8,12 +8,24 @@
   }
 
   &__infected {
-    background-color: #eb434333;
+    background-color: #e5205033;
+    border-radius: 4px;
   }
 
   &__recovered {
-    background-color: #25d39f33;
+    background-color: #09d49e33;
+    border-radius: 4px;
   }
+}
+
+.wrapper-infected {
+  height: 100%;
+  padding: 0 1px 0 0;
+}
+
+.wrapper-recovered {
+  height: 100%;
+  padding: 0 0 0 1px;
 }
 
 .dot-container {
@@ -28,23 +40,24 @@
     width: 4px;
 
     &__infected {
-      background-color: #eb4343;
+      background-color: #e52050;
     }
 
     &__recovered {
-      background-color: #25d39f;
+      background-color: #09d49e;
     }
   }
 }
 
 .label {
-  color: #7b7b7b;
+  color: #000;
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
   white-space: nowrap;
 
   &--small {
+    color: #8e8e93;
     display: contents;
     text-transform: none;
     vertical-align: bottom;
