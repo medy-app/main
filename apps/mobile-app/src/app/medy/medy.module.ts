@@ -14,7 +14,11 @@ import { MedyPreventionStatsComponent } from './components/prevention-stats/prev
 import { MedyPreventionPointsCounterComponent } from './components/prevention-points-counter/prevention-points-counter';
 import { MedyTipCardComponent } from './components/tip-card/tip-card';
 import { MedyNewsCardComponent } from './components/news-card/news-card';
-import { MedyPatientsStatsComponent } from './components/patients-stats/patients-stats';
+import { MedyCasesStatsComponent } from './components/cases-stats/cases-stats';
+
+import { CoronaStatsService } from './services/corona-stats.service';
+
+import { NumberWhitespacesFormat } from './pipes/number-whitespaces-format.pipe';
 
 const medyModuleComponents = [
   MedyPrimaryButtonComponent,
@@ -24,14 +28,16 @@ const medyModuleComponents = [
   MedyPreventionPointsCounterComponent,
   MedyShowMoreButtonComponent,
   MedyTipCardComponent,
-  MedyPatientsStatsComponent,
+  MedyCasesStatsComponent,
   MedyNewsCardComponent,
   MedyReadOnButtonComponent,
-  MedyMoreNewsButtonComponent
+  MedyMoreNewsButtonComponent,
+  NumberWhitespacesFormat
 ];
 
 @NgModule({
   imports: [IonicModule, CommonModule, FormsModule],
+  providers: [CoronaStatsService],
   declarations: medyModuleComponents,
   exports: medyModuleComponents
 })

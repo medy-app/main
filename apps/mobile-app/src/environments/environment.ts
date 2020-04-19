@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  coronaApi: {
+    global: 'https://corona.lmao.ninja/v2/all',
+    country: 'https://corona.lmao.ninja/v2/countries/poland'
+  }
 };
 
 /*
