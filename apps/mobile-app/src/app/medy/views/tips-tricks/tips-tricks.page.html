@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button  defaultHref="tabs/app-main"></ion-back-button>
+          </ion-buttons>
+      <ion-title slot="start">Tips & Tricks</ion-title>  
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true" class="ion-padding">
+
+    <ion-list>
+        <ion-item *ngFor="let tip of tipsList" lines="none" class="medy-tips__item" (click)="openTip(tip.id)"> 
+            <ion-icon class="medy-item__icon" slot="start" name="add"></ion-icon>
+            <ion-label class="ion-no-margin ion-padding-vertical medy-item__label">
+                <ion-grid fixed class="ion-no-padding">
+                    <ion-row>
+                        <ion-col size="12">{{tip.title}}</ion-col>
+                    </ion-row>
+                    <ion-row class="ion-margin-top">
+                        <ion-col size="6" class="medy-label__tips">{{tip.tip}} tips</ion-col>
+                        <ion-col size="6" class="ion-text-end"><medy-show-more-button></medy-show-more-button></ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+  </ion-content>

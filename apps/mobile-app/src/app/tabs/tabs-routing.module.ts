@@ -12,53 +12,66 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: () => import('../medy/views/main/main.module').then((m) => m.MainPageModule),
-          },
-        ],
+            loadChildren: () => import('../medy/views/main/main.module').then(m => m.MainPageModule)
+          }
+        ]
       },
       {
         path: 'news',
         children: [
           {
             path: '',
-            loadChildren: () => import('../medy/views/news/news.module').then((m) => m.NewsPageModule),
-          },
-        ],
+            loadChildren: () => import('../medy/views/news/news.module').then(m => m.NewsPageModule)
+          }
+        ]
       },
       {
         path: 'map',
         children: [
           {
             path: '',
-            loadChildren: () => import('../medy/views/map/map.module').then((m) => m.MapPageModule),
-          },
-        ],
+            loadChildren: () => import('../medy/views/map/map.module').then(m => m.MapPageModule)
+          }
+        ]
       },
       {
         path: 'settings',
         children: [
           {
             path: '',
-            loadChildren: () => import('../medy/views/settings/settings.module').then((m) => m.SettingsPageModule),
-          },
-        ],
+            loadChildren: () => import('../medy/views/settings/settings.module').then(m => m.SettingsPageModule)
+          }
+        ]
+      },
+      {
+        path: 'tips-tricks',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../medy/views/tips-tricks/tips-tricks.module').then(m => m.TipsTricksPageModule)
+          }
+        ]
       },
       {
         path: '',
         redirectTo: '/tabs/app-main',
-        pathMatch: 'full',
-      },
-    ],
+        pathMatch: 'full'
+      }
+    ]
   },
+  // {
+  //   path: 'tips-tricks',
+  //   loadChildren: () => import('../medy/views/tips-tricks/tips-tricks.module').then(m => m.TipsTricksPageModule)
+  // },
   {
     path: '',
     redirectTo: '/tabs/app-main',
-    pathMatch: 'full',
-  },
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
 export class TabsPageRoutingModule {}
