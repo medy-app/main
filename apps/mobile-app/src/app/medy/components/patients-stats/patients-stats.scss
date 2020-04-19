@@ -2,6 +2,14 @@
   width: 100%;
 }
 
+.component-wrapper {
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+  box-shadow: 0 5px 6px #ccc;
+  margin: 10px;
+  padding: 0;
+}
+
 .panel {
   &:nth-child(1) {
     border-right: solid 1px #dddedd;
@@ -9,12 +17,10 @@
 
   &__infected {
     background-color: #e5205033;
-    border-radius: 4px;
   }
 
   &__recovered {
     background-color: #09d49e33;
-    border-radius: 4px;
   }
 }
 
