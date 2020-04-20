@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "medy-frontend",
+  "appId": "com.example.medy",
+  "appName": "mobile-app",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

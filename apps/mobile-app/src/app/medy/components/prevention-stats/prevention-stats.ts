@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { PreventionPointsService } from '../../../core/services/prevention-points.service';
 
 @Component({
   selector: 'medy-prevention-stats',
   templateUrl: 'prevention-stats.html',
-  styleUrls: ['prevention-stats.scss'],
+  styleUrls: ['prevention-stats.scss']
 })
 export class MedyPreventionStatsComponent {
-  constructor() {}
+  preventionPoints$ = this.preventionPointsService.preventionPoints$;
+  constructor(private readonly preventionPointsService: PreventionPointsService) {}
 }
