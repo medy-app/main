@@ -1,0 +1,15 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title> {{ title }}</ion-card-title>
+    <span class="provider">{{ provider }}</span>
+    <span class="time">{{ time }}</span>
+    <span class="type">{{ type }}</span>
+  </ion-card-header>
+  <ion-card-content>
+    <img *ngIf="photo" [src]="photo">
+    <ng-content></ng-content>
+  </ion-card-content>
+  <div class="ion-float-right read-more">
+    <medy-read-on-button></medy-read-on-button>
+  </div>
+</ion-card>

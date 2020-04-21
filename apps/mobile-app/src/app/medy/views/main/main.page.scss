@@ -1,0 +1,25 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+section {
+  title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 21px;
+  }
+}
+
+.scrollable-x-wrapper {
+  overflow-x: scroll;
+
+  .tips-row-scrollable {
+    width: max-content;
+  }
+}
+
+.more-news-button {
+  margin-bottom: 60px;
+  margin-top: 35px;
+}

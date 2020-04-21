@@ -1,0 +1,16 @@
+button {
+  align-items: center;
+  display: flex;
+  filter: opacity(.3);
+  flex-direction: row;
+  justify-content: center;
+}
+
+span {
+  font-size: 16px;
+}
+
+ion-icon {
+  font-size: 18px;
+  margin-left: 5px;
+}

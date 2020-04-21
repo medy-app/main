@@ -1,0 +1,78 @@
+<!-- <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-end">
+      <a class="navbar-item is-size-3" href="#">
+        Tips
+      </a>
+      <a class="navbar-item is-size-3 m-l-34" href="#">
+        Manage Tips
+      </a>
+    </div>
+    <div class="navbar-center">
+      <a class="navbar-item m-t-8 m-l-34 m-r-34" href="#">
+        <figure class="image is-32x32">
+          <img src="../../../assets/Frontend_src_assets_logo-medy.png">
+        </figure>
+      </a>
+    </div>
+    <div class="navbar-start">
+      <a class="navbar-item is-size-3" href="#">
+        Manage News
+      </a>
+      <a class="navbar-item is-size-3 m-l-34" href="#">
+        Logout
+      </a>
+    </div>
+  </div>
+</nav> -->
+
+<nav class="navbar is-fixed-top border-bottom-navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand m-t-5 m-l-21">
+    <a class="navbar-item" [routerLink]="['/dashboard']">
+      <figure class="image is-32x32">
+        <img src="../../../assets/Frontend_src_assets_logo-medy.png">
+      </figure>
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <a class="navbar-item is-size-3 m-r-34" [routerLink]="['/dashboard']">
+          Home
+        </a>
+        <a class="navbar-item is-size-3 m-r-34" [routerLink]="['/list-news']">
+          Manage News
+        </a>
+        <a class="navbar-item is-size-3 m-r-34" href="#">
+          Tips
+        </a>
+        <a class="navbar-item is-size-3 m-r-34" [routerLink]="['/list-advice']">
+          Manage Tips
+        </a>
+        <div class="buttons m-r-21">
+          <a class="button is-light">
+            <strong>Log out</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

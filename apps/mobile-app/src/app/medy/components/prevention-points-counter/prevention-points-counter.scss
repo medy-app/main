@@ -1,0 +1,26 @@
+.circle {
+  background-color: rgba(0, 0, 0, .03);
+  border-radius: 50%;
+  text-align: center;
+
+  &__outer {
+    height: 122px;
+    padding: 16.5px;
+    width: 122px;
+  }
+
+  &__inner {
+    height: 89px;
+    width: 89px;
+  }
+}
+
+.points {
+  color: white;
+  font-size: 21px;
+  font-weight: 700;
+  height: 89px;
+  line-height: 89px;
+  margin: auto;
+  white-space: nowrap;
+}

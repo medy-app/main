@@ -1,0 +1,55 @@
+
+<ion-content [fullscreen]="true">
+  <medy-prevention-stats></medy-prevention-stats>
+  <section>
+    <ion-grid>
+      <ion-row class="ion-justify-content-between">
+        <title>Tips and tricks</title>
+        <medy-show-more-button></medy-show-more-button>
+      </ion-row>
+      <div class="scrollable-x-wrapper">
+        <ion-row class="tips-row-scrollable">
+          <medy-tip-card label="How to prevent?" number="12" icon="assets/svg/hands.svg"></medy-tip-card>
+          <medy-tip-card label="Facts & myths" number="34" icon="assets/svg/virus.svg"></medy-tip-card>
+          <medy-tip-card label="What to do?" number="54" icon="assets/svg/car.svg"></medy-tip-card>
+        </ion-row>
+      </div>
+    </ion-grid>
+  </section>
+  <section>
+    <ion-grid>
+      <ion-row class="ion-justify-content-between">
+        <title>News</title>
+        <medy-show-more-button></medy-show-more-button>
+      </ion-row>
+      <ion-row>
+        <medy-patients-stats infected="52" recovered="15"></medy-patients-stats>
+      </ion-row>
+      <ion-row>
+        <medy-news-card 
+          title="Od dziś wprowadzimy stan zagrożenia epidemicznego" 
+          provider="Ministerstwo Zdrowia" 
+          time="1g temu" 
+          type="Komunikat" 
+        >
+          Dziś ma wejść w życie rozporządzenie na mocy, którego zostanie wprowadzony stan zagrożenia epidemicznego, a
+          dziewiętnaście szpitali zostanie przekształconych w szpitale zakaźne - to kolejne działania Ministerstwa Zdrowia, które
+          mają ograniczyć rozszerzanie się koronawirusa.
+        </medy-news-card>
+        <medy-news-card 
+          title="Materiały o #koronawirus od Ministerstwa Zdrowia" 
+          provider="Ministerstwo Zdrowia" 
+          time="2g temu" 
+          type="Informacja" 
+          photo="../../../../assets/img/mater.png"
+        >
+          Materiały o <ion-text color="tertiary">#koronawirus</ion-text> do pobrania/wydruku i dalszego rozpowszechniania na
+          stronie: <a href="http://gov.pl/web/koronawirus/do-pobrania"><ion-text color="tertiary">http://gov.pl/web/koronawirus/do-pobrania</ion-text></a>
+        </medy-news-card>
+      </ion-row>
+      <ion-row class="ion-justify-content-center more-news-button">
+        <medy-more-news-button ></medy-more-news-button>
+      </ion-row>
+    </ion-grid>
+  </section>
+</ion-content>

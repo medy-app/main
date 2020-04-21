@@ -1,0 +1,56 @@
+ion-content ion-toolbar {
+  --background: translucent;
+}
+
+h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+a {
+  color: var(--ion-color-secondary);
+}
+
+.medy-box-container {
+  align-items: center;
+  border: 1px solid gray;
+  border-color: var(--ion-color-secondary);
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: .5rem;
+
+  .medy-box__img {
+    max-height: 3rem;
+    max-width: 80%;
+    text-align: center;
+
+    img {
+      max-height: 3rem;
+    }
+  }
+
+  .medy-box__notice {
+    color: var(--ion-color-medium);
+    font-size: .6rem;
+    margin: .5rem 0;
+    text-align: center;
+
+    strong {
+      color: var(--ion-color-dark);
+    }
+  }
+}
+
+.medy-about__logo {
+  svg {
+    width: 100%;
+  }
+}
+
+.medy-about__notice {
+  font-size: .8rem;
+  line-height: 1.2rem;
+}

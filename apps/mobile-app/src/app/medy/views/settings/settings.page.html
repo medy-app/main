@@ -1,0 +1,125 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Ustawienia</ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="secondary" class="medy-button__clear" (click)="rmPoints()">
+        <ion-icon slot="end" name="close-circle-outline"></ion-icon>
+        Wyzeruj punkty
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <medy-secondary-button class="medy-button" (click)="openPage()" arrow="true">
+    Preferencje powiadomień
+  </medy-secondary-button>
+
+  <medy-secondary-button class="medy-button" (click)="openPage()" arrow="true">
+    O nas
+  </medy-secondary-button>
+
+  <medy-primary-button class="medy-button" (click)="openPage()" arrow="true">
+    Wesprzyj projekt
+  </medy-primary-button>
+
+  <ion-text>
+    <h2>Partnerzy</h2>
+  </ion-text>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6">
+        <div class="medy-box-container">
+          <div class="medy-box__img">
+            <img src="/assets/img/logo_optimusway.png" />
+          </div>
+          <div class="medy-box__notice"><strong>OptimusWay</strong> - Blockchain Software house</div>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="medy-box-container">
+          <div class="medy-box__img">
+            <img src="/assets/img/logo_efekt-agency.png" />
+          </div>
+          <div class="medy-box__notice"><strong>EFEKT Agency</strong> - UI/UX aplikacji</div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <div class="medy-box-container">
+          <div class="medy-box__img">
+            <img src="/assets/img/logo_govtechpolska.png" />
+          </div>
+          <div class="medy-box__notice">
+            <strong>GovTech Polska</strong> - Connecting public administration with the best innovator’s ideas
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="6">
+        <div class="medy-box-container">
+          <div class="medy-box__img">
+            <img src="/assets/img/logo_safesafe.png" />
+          </div>
+          <div class="medy-box__notice"><strong>SafeSafe</strong> - wspólna walka przeciwko Koronowirusowi</div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">
+        <div class="medy-box-container">
+          <div class="medy-box__img">
+            <img src="../../../../assets/img/logo_optimusway.png" />
+          </div>
+          <div class="medy-box__notice"><strong>OptimusWay</strong> - Blockchain Software house</div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-no-padding ion-margin-vertical" fixed>
+    <ion-row>
+      <ion-col size="2">
+        <div class="medy-about__logo">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="56" height="56" rx="16" fill="#09D49E" />
+            <path
+              d="M13 37H29.7192C33.9815 32.8345 36.8888 29.9182 38.441 28.2511C40.1756 26.3881 40.1756 21.4955 36.5782 19.7249C34.1799 18.5444 31.8936 18.861 29.7192 20.6744C27.4545 18.8237 25.1482 18.5072 22.8004 19.7249C19.2787 21.5514 19.2787 26.3905 21.0005 28.2511"
+              stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </div>
+      </ion-col>
+      <ion-col class="ion-padding-horizontal" size="10">
+        <div class="medy-about__notice">
+          <strong>Open Source Aplikacja Medy</strong>
+          - jest odpowiedzią na epidemie koronawirusa w Polsce. Wierzymy, że edukacja, rzetelne przekazywanie
+          sprawdzonych informacji i prewencja pojedynczych osób może wiele zmienić w powstrzymaniu światowej pandemi.
+          Aplikacja powstała Pro bono, jeżeli chcesz wesprzeć jej utrzymanie, kliknij ,,wesprzyj projekt’’
+          <a href="">czytaj więcej...</a>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-text>
+    <h2>Inne</h2>
+  </ion-text>
+
+  <ion-text>
+    <p>
+      <a href="">Wsparcie</a>
+    </p>
+    <p>
+      <a href="">Terms & Conditions</a>
+    </p>
+    <p>
+      <a href="">Privacy policy</a>
+    </p>
+    <p>
+      <a href="">Disclaimer</a>
+    </p>
+    <p>
+      <a href="">EULA</a>
+    </p>
+  </ion-text>
+</ion-content>
