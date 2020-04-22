@@ -6,10 +6,10 @@
       "dest": "dist/apps/api/main.js"
     }
   ],
-  "functions": {
-    "dist/apps/api/main.js": {
-      "memory": 3008,
-      "maxDuration": 60
+  "builds": [
+    {
+      "src": "dist/apps/api/main.js",
+      "use": "@now/node"
     }
-  }
+  ]
 }
