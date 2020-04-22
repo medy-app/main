@@ -9,7 +9,7 @@ import {FeedModule} from './feed/feed.module';
     ConfigModule.forRoot(),
     AuthModule,
     FeedModule,
-    MongooseModule.forRoot('mongodb://localhost:27017/medy'),
+    MongooseModule.forRoot(process.env['MONGO_PATH'] || 'mongodb://localhost:27017/medy'),
   ],
   controllers: [],
   providers: [],
