@@ -9,11 +9,9 @@ import { AppModule } from './app.module';
 
 async function bootstrap(): Promise<any> {
   const app = await NestFactory.create(AppModule);
-  const globalPrefix = 'api';
-  app.setGlobalPrefix(globalPrefix);
-  const port = process.env.port || 3333;
+  const port = process.env["PORT"] || 3333;
   await app.listen(port, () => {
-    console.log('Listening at http://localhost:' + port + '/' + globalPrefix);
+    console.log('Listening at http://0.0.0.0:' + port);
   });
 }
 
