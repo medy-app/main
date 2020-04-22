@@ -8,7 +8,7 @@
   ],
   "builds": [
     {
-      "src": "dist/apps/api/main.js",
+      "src": "*.js",
       "use": "@now/node"
     }
   ]
